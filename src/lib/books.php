@@ -75,17 +75,20 @@ class BookDetailMetaBox
 
         wp_nonce_field($this->nonce_action, $this->nonce_field);
 ?>
-        <label for="<?php echo $this->author; ?>">Author:</label>
-        <input class="widefat" type="text" id="<?php echo $this->author; ?>" name="<?php echo $this->author; ?>" value="<?php echo esc_attr($author); ?>" />
+<label for="<?php echo $this->author; ?>">Author:</label>
+<input class="widefat" type="text" id="<?php echo $this->author; ?>" name="<?php echo $this->author; ?>"
+    value="<?php echo esc_attr($author); ?>" />
 
-        <label for="<?php echo $this->published_date; ?>">Published Date:</label>
-        <input class="widefat" type="text" id="<?php echo $this->published_date; ?>" name="<?php echo $this->published_date; ?>" value="<?php echo esc_attr($published_date); ?>" />
+<label for="<?php echo $this->published_date; ?>">Published Date:</label>
+<input class="widefat" type="text" id="<?php echo $this->published_date; ?>" name="<?php echo $this->published_date; ?>"
+    value="<?php echo esc_attr($published_date); ?>" />
 
-        <label for="<?php echo $this->layout; ?>">Layout:</label>
-        <select class="widefat" name="<?php echo $this->layout; ?>" id="<?php echo $this->layout; ?>" value="<?php echo esc_attr($layout); ?>">
-            <option <?php selected($layout, "full") ?> value="full">Full Width</option>
-            <option <?php selected($layout, "sidebar") ?> value="sidebar">Post with Sidebar</option>
-        </select>
+<label for="<?php echo $this->layout; ?>">Layout:</label>
+<select class="widefat" name="<?php echo $this->layout; ?>" id="<?php echo $this->layout; ?>"
+    value="<?php echo esc_attr($layout); ?>">
+    <option <?php selected($layout, "full") ?> value="full">Full Width</option>
+    <option <?php selected($layout, "sidebar") ?> value="sidebar">Post with Sidebar</option>
+</select>
 
 <?php
     }
@@ -114,9 +117,9 @@ class BookDetailMetaBox
 
         // Reason why we put '_' on this case is metakeys need to have underscore as prefix
 
-        update_post_meta($post_id, _prefix($this->author), $author);
-        update_post_meta($post_id, _prefix($this->published_date), $published_date);
-        update_post_meta($post_id, _prefix($this->layout), $layout);
+        update_post_meta($post_id, _pluginname_prefix($this->author), $author);
+        update_post_meta($post_id, _pluginname_prefix($this->published_date), $published_date);
+        update_post_meta($post_id, _pluginname_prefix($this->layout), $layout);
     }
 }
 
