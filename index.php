@@ -9,10 +9,3 @@
  * Text Domain: _pluginname
  * Domain Path: /languages
  */
-
-if (!defined('WPINC')) {
-    die;
-}
-include_once('dist/lib/helpers.php');
-include_once('dist/lib/enqueue-assets.php');
-include_once('dist/lib/books.php');
