@@ -14,6 +14,7 @@ import zip from "gulp-zip";
 import info from "./package.json";
 import replace from "gulp-replace";
 import wpPot from "gulp-wp-pot";
+import rename from "gulp-rename";
 
 const PRODUCTION = yargs.argv.prod;
 
@@ -163,6 +164,7 @@ export const build = series(
   clean,
   parallel(styles, images, copy, scripts),
   pot,
+
   compress
 );
 export default dev;

@@ -1,5 +1,5 @@
 <?php
-function _prefix($text)
+function _pluginname_prefix($text)
 {
     // Check if the text starts with an underscore
     if (substr($text, 0, 1) === '_') {
