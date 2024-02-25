@@ -5,7 +5,7 @@
   "namespace": "DionnieWP",
   "theme": "dionnie",
   "version": "1.0.0",
-  "description": "A plugin for Dionnie theme.",
+  "description": "A simple plugin made for Dionnie Theme.",
   "main": "gulpfile.js",
   "scripts": {
     "start": "gulp",
