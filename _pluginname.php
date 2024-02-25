@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name: _pluginname
+ * Plugin Name: _plugindisplayname
  * Version: 1.0
  * Author: Mark Dionnie Bulingit
  * License: GPL2 

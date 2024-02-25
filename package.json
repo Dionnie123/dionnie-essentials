@@ -1,7 +1,8 @@
 {
-  "name": "dionnie_essentials",
-  "slug": "dionnie-essentials",
-  "namespace": "DionnieEssentials",
+  "name": "dionnie_wp",
+  "slug": "dionnie-wp",
+  "displayName": "Dionnie WP",
+  "namespace": "DionnieWP",
   "theme": "dionnie",
   "version": "1.0.0",
   "description": "A plugin for Dionnie theme.",

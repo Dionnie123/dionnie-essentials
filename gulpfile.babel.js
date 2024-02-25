@@ -123,6 +123,7 @@ export const compress = () => {
     "!package.json",
     "!package-lock.json",
   ])
+    .pipe(replace("_plugindisplayname", info.displayName))
     .pipe(replace("_pluginname_", info.name + "_"))
     .pipe(replace("_pluginname-", info.slug + "-"))
     .pipe(replace("_pluginname", info.slug))
@@ -135,7 +136,7 @@ export const compress = () => {
         }
       })
     )
-    .pipe(zip(`${info.name}.zip`))
+    .pipe(zip(`${info.slug}.zip`))
     .pipe(dest("bundled"));
 };
 
