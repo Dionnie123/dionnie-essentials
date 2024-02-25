@@ -127,6 +127,14 @@ export const compress = () => {
     .pipe(replace("_pluginname-", info.slug + "-"))
     .pipe(replace("_pluginname", info.slug))
     .pipe(replace("_PluginName", info.namespace))
+    .pipe(
+      rename(function (path) {
+        console.log(path);
+        if (path.basename.includes("_pluginname")) {
+          path.basename = `${info.slug}`;
+        }
+      })
+    )
     .pipe(zip(`${info.name}.zip`))
     .pipe(dest("bundled"));
 };

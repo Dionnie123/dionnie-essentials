@@ -13,8 +13,6 @@ if (!defined('WPINC')) {
     die;
 }
 
-include_once(plugin_dir_path(__FILE__) . 'dist/lib/helpers.php');
-
 require_once('dist/lib/helpers.php');
 require_once('dist/lib/enqueue-assets.php');
 include_once('dist/lib/books.php');
