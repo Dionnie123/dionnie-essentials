@@ -45,6 +45,9 @@ class BookDetailMetaBox
 
     public function __construct()
     {
+        $this->author = _pluginname_private_metakey("_pluginname_book_author");
+        $this->published_date = _pluginname_private_metakey("_pluginname_book_published_date");
+        $this->layout = _pluginname_private_metakey("_pluginname_book_layout");
         add_action('add_meta_boxes_book', array($this, '_pluginname_book_detail_metabox'));
         add_action('save_post', array($this, '_pluginname_book_detail_metabox_update'), 10, 2);
     }
@@ -75,17 +78,20 @@ class BookDetailMetaBox
 
         wp_nonce_field($this->nonce_action, $this->nonce_field);
 ?>
-        <label for="<?php echo $this->author; ?>">Author:</label>
-        <input class="widefat" type="text" id="<?php echo $this->author; ?>" name="<?php echo $this->author; ?>" value="<?php echo esc_attr($author); ?>" />
+<label for="<?php echo $this->author; ?>">Author:</label>
+<input class="widefat" type="text" id="<?php echo $this->author; ?>" name="<?php echo $this->author; ?>"
+    value="<?php echo esc_attr($author); ?>" />
 
-        <label for="<?php echo $this->published_date; ?>">Published Date:</label>
-        <input class="widefat" type="text" id="<?php echo $this->published_date; ?>" name="<?php echo $this->published_date; ?>" value="<?php echo esc_attr($published_date); ?>" />
+<label for="<?php echo $this->published_date; ?>">Published Date:</label>
+<input class="widefat" type="text" id="<?php echo $this->published_date; ?>" name="<?php echo $this->published_date; ?>"
+    value="<?php echo esc_attr($published_date); ?>" />
 
-        <label for="<?php echo $this->layout; ?>">Layout:</label>
-        <select class="widefat" name="<?php echo $this->layout; ?>" id="<?php echo $this->layout; ?>" value="<?php echo esc_attr($layout); ?>">
-            <option <?php selected($layout, "full") ?> value="full">Full Width</option>
-            <option <?php selected($layout, "sidebar") ?> value="sidebar">Post with Sidebar</option>
-        </select>
+<label for="<?php echo $this->layout; ?>">Layout:</label>
+<select class="widefat" name="<?php echo $this->layout; ?>" id="<?php echo $this->layout; ?>"
+    value="<?php echo esc_attr($layout); ?>">
+    <option <?php selected($layout, "full") ?> value="full">Full Width</option>
+    <option <?php selected($layout, "sidebar") ?> value="sidebar">Post with Sidebar</option>
+</select>
 
 <?php
     }
