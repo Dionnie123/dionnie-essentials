@@ -1,8 +1,8 @@
 <?php
 
 /**
- * Plugin Name: _info.displayName
- * Description: _info.description
+ * Plugin Name: _plugintitle
+ * Description: _plugindescription
  * Version: 1.0
  * Author: Mark Dionnie Bulingit
  * License: GPL2 
