@@ -123,8 +123,9 @@ export const compress = () => {
     "!package.json",
     "!package-lock.json",
   ])
-    .pipe(replace("_plugintitle", info.displayName))
+    .pipe(replace("_plugintitle", info.title))
     .pipe(replace("_plugindescription", info.description))
+    .pipe(replace("_pluginauthor", info.author))
     .pipe(replace("_pluginname_", info.name + "_"))
     .pipe(replace("_pluginname-", info.slug + "-"))
     .pipe(replace("_pluginname", info.slug))
