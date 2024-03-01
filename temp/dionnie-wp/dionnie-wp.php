@@ -1,13 +1,13 @@
 <?php
 
 /**
- * Plugin Name: _plugintitle
- * Description: _plugindescription
+ * Plugin Name: Dionnie WP
+ * Description: A simple plugin made for Dionnie Theme.
  * Version: 1.0.0
- * Author: _pluginauthor
+ * Author: Mark Dionnie Bulingit
  * License: GPL2 
  * Licese URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: _pluginname
+ * Text Domain: dionnie-wp
  * Domain Path: /languages
  */
 if (!defined('WPINC')) {

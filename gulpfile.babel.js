@@ -138,6 +138,14 @@ export const compress = () => {
         }
       })
     )
+
+    .pipe(
+      rename(function (path) {
+        path.dirname = `${info.slug}/` + path.dirname; // Change 'folder_name' to your desired folder name
+      })
+    )
+    .pipe(dest("temp"))
+
     .pipe(zip(`${info.slug}.zip`))
     .pipe(dest("bundled"));
 };
