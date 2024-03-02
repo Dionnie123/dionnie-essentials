@@ -120,10 +120,6 @@ class BookDetailMetaBox
         $published_date = isset($_POST[$this->published_date]) ? sanitize_text_field($_POST[$this->published_date]) : '';
         $layout = isset($_POST[$this->layout]) ? sanitize_text_field($_POST[$this->layout]) : '';
 
-
-        // Reason why we put '_' on this case is metakeys need to have underscore as prefix
-        //
-
         update_post_meta($post_id, $this->author, $author);
         update_post_meta($post_id, $this->published_date, $published_date);
         update_post_meta($post_id, $this->layout, $layout);
